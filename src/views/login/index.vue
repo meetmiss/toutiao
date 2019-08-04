@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import store from '@/store'
 export default {
   data () {
     // 校验函数
@@ -37,8 +38,8 @@ export default {
     }
     return {
       loginForm: {
-        mobile: '',
-        code: ''
+        mobile: '13411111111',
+        code: '246810'
       },
       // 校验
       loginRules: {
@@ -63,6 +64,8 @@ export default {
               this.loginForm
             )
             .then(res => {
+              // 存储用户信息
+              store.setUser(res.data.data)
               this.$router.push('/')
             })
             .catch(() => {
