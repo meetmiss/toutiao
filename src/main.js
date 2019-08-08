@@ -9,6 +9,9 @@ import router from '@/router'
 import '@/style/index.less'
 import axios from '@/api'
 
+import myCom from '@/components'
+Vue.use(myCom)
+
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 Vue.prototype.$http = axios
