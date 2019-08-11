@@ -24,12 +24,12 @@
         </el-table-column>
       </el-table>
       <el-pagination
-        v-if="total > reqParams.per_pager"
+        v-if="total > reqParams.per_page"
         style="margin-top:15px"
         background
         layout="prev,pager,next"
         :current-page="reqParams.page"
-        :page-size="reqParams.pager"
+        :page-size="reqParams.per_page"
         @current-change="changePager"
         :total="total"
       ></el-pagination>
@@ -45,7 +45,7 @@ export default {
       reqParams: {
         response_type: 'comment',
         page: 1,
-        per_pager: 20
+        per_page: 20
       },
       total: 0
     }
