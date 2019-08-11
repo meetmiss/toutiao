@@ -28,3 +28,12 @@ body {
   height: 178px;
   display: block;
 }
+.publishContainer .ql-editor {
+  height: 400px;
+}
+.publishContainer .ql-toolbar {
+  padding: 0 8px;
+}
+.my-image .el-dialog__body {
+  padding-bottom: 0;
+}
